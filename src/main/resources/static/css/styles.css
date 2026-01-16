@@ -1,0 +1,127 @@
+/* Valorant Theme Colors */
+:root {
+    --val-black: #0f1923;
+    --val-red: #ff4655;
+    --val-white: #ece8e1;
+    --val-gray: #768079;
+    --val-dark-gray: #1f2731;
+}
+
+body {
+    background-color: var(--val-black);
+    color: var(--val-white);
+    font-family: 'DIN Next W1G', sans-serif; /* Mimic Valorant font if possible, else fallback */
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--val-white);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--val-red);
+}
+
+.navbar {
+    background-color: var(--val-dark-gray);
+    padding: 1rem 2rem;
+    border-bottom: 2px solid var(--val-red);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--val-red);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.btn {
+    background-color: var(--val-red);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #d13644;
+}
+
+.card {
+    background-color: var(--val-dark-gray);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #333;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--val-white);
+}
+
+.meta {
+    font-size: 0.8rem;
+    color: var(--val-gray);
+}
+
+input[type="text"], input[type="password"], input[type="email"], textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background-color: #0f1923;
+    border: 1px solid var(--val-gray);
+    color: white;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--val-red);
+    outline: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background-color: var(--val-red);
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.alert {
+    padding: 1rem;
+    background-color: rgba(255, 70, 85, 0.2);
+    border: 1px solid var(--val-red);
+    color: var(--val-red);
+    margin-bottom: 1rem;
+}

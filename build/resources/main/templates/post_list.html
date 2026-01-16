@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{layout :: head}"></head>
+
+<body>
+    <nav th:replace="~{layout :: navbar}"></nav>
+
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h1>최신 게시글</h1>
+            <a th:href="@{/post/create}" class="btn">글쓰기</a>
+        </div>
+
+        <div class="card" th:each="post : ${postList}">
+            <a th:href="@{|/post/detail/${post.id}|}" class="card-title" th:text="${post.title}">제목</a>
+            <div class="meta">
+                <span th:if="${post.author != null}" th:text="${post.author.username}">글쓴이</span>
+                <span th:text="${#temporals.format(post.createDate, 'yyyy-MM-dd HH:mm')}">날짜</span>
+                <span th:text="|댓글 ${#lists.size(post.commentList)}|">댓글수</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
